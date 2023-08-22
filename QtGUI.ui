@@ -1,0 +1,3338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1725</width>
+    <height>975</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1725</width>
+    <height>950</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1725</width>
+    <height>975</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>CLI Convertor</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTabWidget" name="Configuretabs">
+    <property name="geometry">
+     <rect>
+      <x>950</x>
+      <y>0</y>
+      <width>775</width>
+      <height>950</height>
+     </rect>
+    </property>
+    <property name="minimumSize">
+     <size>
+      <width>775</width>
+      <height>925</height>
+     </size>
+    </property>
+    <property name="currentIndex">
+     <number>2</number>
+    </property>
+    <widget class="QWidget" name="Parameterstab">
+     <attribute name="title">
+      <string>Parameters</string>
+     </attribute>
+     <widget class="QScrollArea" name="Parameterscroll">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>775</width>
+        <height>925</height>
+       </rect>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_3">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>773</width>
+         <height>923</height>
+        </rect>
+       </property>
+       <widget class="QGroupBox" name="Saveparam">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>350</y>
+          <width>700</width>
+          <height>100</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Save parameters .csv</string>
+        </property>
+        <widget class="QPushButton" name="Saveparambutton">
+         <property name="geometry">
+          <rect>
+           <x>575</x>
+           <y>50</y>
+           <width>99</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save file</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Saveparamlabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>50</y>
+           <width>85</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save Name</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Saveparamtext">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>50</y>
+           <width>400</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Parametervalues">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>25</y>
+          <width>700</width>
+          <height>300</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Parameters</string>
+        </property>
+        <widget class="QSpinBox" name="Selectindexbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>20</number>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Parameter5box">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrent">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Beam current</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrent">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lens current</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Focuscurrentbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrent">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>160</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Focus current</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Parameter5">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Parameter 5</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Parameter4box">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Lenscurrentbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Beamcurrentbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>1.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Selectindex">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Index</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Parameter4">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Parameter 4</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_3">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Changeparamindexbutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>240</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify parameters</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>80</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrentunit">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>120</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrentunit">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>160</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Parameterunit4">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>200</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Parameterunit5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Preheattab">
+     <attribute name="title">
+      <string>Preheat</string>
+     </attribute>
+     <widget class="QScrollArea" name="Preheatscroll">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>775</width>
+        <height>925</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAsNeeded</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContents</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_2">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>773</width>
+         <height>923</height>
+        </rect>
+       </property>
+       <widget class="QGroupBox" name="Preheatbottom">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>25</y>
+          <width>700</width>
+          <height>370</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Preheat Bottom plate</string>
+        </property>
+        <widget class="QLabel" name="Preheatbottomcount">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pattern count</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatbottomcountbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Preheatbottomcountbutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>30</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select Pattern count</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_11">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatbottomindexbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomindex">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pattern index</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomvelocity">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>160</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Velocity</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatbottomvelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>32.500000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>325.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomruns">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Runs</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomdist">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Distance</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatbottomdistbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>5.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Modifypreheatbottombutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>280</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify Pattern</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Displaypreheatbottombutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>330</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display Pattern</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatbottomrunbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomhatchcount">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatches</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Preheatbottomhatchcountbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Preheatbottomtimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomtime">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_4">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatbottombeambox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottombeam">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Beam current</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrentunit_4">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomlens">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lens current</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatbottomlensbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>494.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrentunit_4">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>280</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatbottomfocusbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>280</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>494.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatbottomfocus">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>280</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Focus current</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_12">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>320</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_6">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>160</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ms&lt;sup&gt;-1&lt;/sup&gt;</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Preheatlayer">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>420</y>
+          <width>700</width>
+          <height>370</height>
+         </rect>
+        </property>
+        <property name="title">
+         <string>Preheat Layers</string>
+        </property>
+        <widget class="QLabel" name="Preheatlayercount">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pattern count</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatlayercountbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Preheatlayercountbutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>30</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select Pattern count</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_18">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatlayerindexbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="maximum">
+          <number>0</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerindex">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Pattern index</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayervelocity">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>160</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Velocity</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatlayervelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>32.500000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>325.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerruns">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Runs</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerdist">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Distance</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatlayerdistbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>5.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="value">
+          <double>0.100000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Modifypreheatlayerbutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>280</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify Pattern</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Displaypreheatlayerbutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>330</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display Pattern</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Preheatlayerrunbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>1</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerhatchcount">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatches</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Preheatlayertimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Preheatlayerhatchcountbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayertime">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerfocus">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>280</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Focus current</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatlayerfocusbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>280</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>494.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatlayerbeambox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>1.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrentunit_5">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrentunit_5">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>280</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerlens">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Lens current</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Preheatlayerbeam">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Beam current</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Preheatlayerlensbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>494.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="Line" name="line_13">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>320</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_7">
+         <property name="geometry">
+          <rect>
+           <x>280</x>
+           <y>160</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ms&lt;sup&gt;-1&lt;/sup&gt;</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Fileimporttab">
+     <attribute name="title">
+      <string>File Import</string>
+     </attribute>
+     <widget class="QScrollArea" name="Filescroll">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>775</width>
+        <height>925</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>725</width>
+        <height>850</height>
+       </size>
+      </property>
+      <property name="verticalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOn</enum>
+      </property>
+      <property name="horizontalScrollBarPolicy">
+       <enum>Qt::ScrollBarAlwaysOff</enum>
+      </property>
+      <property name="sizeAdjustPolicy">
+       <enum>QAbstractScrollArea::AdjustToContentsOnFirstShow</enum>
+      </property>
+      <property name="widgetResizable">
+       <bool>false</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>-177</y>
+         <width>750</width>
+         <height>1100</height>
+        </rect>
+       </property>
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <widget class="QGroupBox" name="Savefile">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>870</y>
+          <width>700</width>
+          <height>170</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Save FIle</string>
+        </property>
+        <widget class="QPushButton" name="Savebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>130</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save Custom</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Savefilelabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>50</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save Path</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Savefiletext">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>50</y>
+           <width>473</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="Saveprogress">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>90</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Savebuttonstatic">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>90</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Layerinformation">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>645</y>
+          <width>700</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Slice Information</string>
+        </property>
+        <widget class="QLabel" name="Polylines">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour count</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Polylinecountbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatches">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch count</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Hatchcountbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Selectlayerinfo">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select slice</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Selectlayerinfobox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>100</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Layerheight">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>160</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Slice height</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Layerheightbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="Line" name="line_4">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QSlider" name="Selectlayerinfoslider">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>30</y>
+           <width>330</width>
+           <height>29</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Polylinetimebox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Polylinetime">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour Time</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Hatchtimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchtime">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch Time</string>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Fileinformation">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>25</y>
+          <width>700</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>File Information</string>
+        </property>
+        <widget class="QLabel" name="Layercount">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Slice Count</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Date">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>110</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Date Created</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Version">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>110</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Version</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Layercountbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Datebox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>110</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Versionbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>110</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Filetext">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>473</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Importfilelabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>85</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>File Path</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Parsebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>160</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Parse file</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_5">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>150</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Filenamebox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Filename">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>File Name</string>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="Parseprogress">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Layerparse">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>250</y>
+          <width>700</width>
+          <height>370</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Slice Parameters</string>
+        </property>
+        <widget class="QLabel" name="Polylinevelocity">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>80</y>
+           <width>125</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour velocity</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchvelocity">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>80</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch velocity</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Polylinevelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Ignored" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>3.250000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Hatchvelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>80</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="decimals">
+          <number>3</number>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>3.250000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Layersupdate">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>290</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select slices</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Selectlayersbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>290</y>
+           <width>473</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>layer numbers separated by commas; eg. 0-10, 25</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Polylineruncount">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>120</y>
+           <width>125</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour runs</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Polylineruncountbox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchruncount">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>120</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch runs</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Hatchruncountbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>120</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>10</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Selectlayer">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Select slice</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Selectlayerbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Modifyparambutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>330</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Modify parameters</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>280</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="Line" name="line_2">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QProgressBar" name="Modifyprogress">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>330</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="value">
+          <number>24</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrentunit_2">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>200</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Polylinebeambox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Polylinelensbox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Polylinefocusbox">
+         <property name="geometry">
+          <rect>
+           <x>170</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_2">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>160</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Polylinebeam">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>160</y>
+           <width>125</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour Beam</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Polylinelens">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>200</y>
+           <width>125</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour Lens</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Polylinefocus">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>240</y>
+           <width>125</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Contour Focus</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrentunit_2">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Hatchbeambox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>160</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Hatchlensbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>200</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Hatchfocusbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>240</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.010000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>1000.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>20.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_3">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>160</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchbeam">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>160</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch Beam</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchlens">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>200</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch Lens</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Hatchfocus">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>240</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch Focus</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Focuscurrentunit_3">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>240</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Lenscurrentunit_3">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>200</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>mA</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_8">
+         <property name="geometry">
+          <rect>
+           <x>300</x>
+           <y>80</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ms&lt;sup&gt;-1&lt;/sup&gt;</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Beamcurrentunit_9">
+         <property name="geometry">
+          <rect>
+           <x>640</x>
+           <y>80</y>
+           <width>50</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>ms&lt;sup&gt;-1&lt;/sup&gt;</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="Calibratetab">
+     <attribute name="title">
+      <string>Calibrate</string>
+     </attribute>
+     <widget class="QScrollArea" name="Calibratescroll">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>775</width>
+        <height>925</height>
+       </rect>
+      </property>
+      <property name="widgetResizable">
+       <bool>true</bool>
+      </property>
+      <widget class="QWidget" name="scrollAreaWidgetContents_4">
+       <property name="geometry">
+        <rect>
+         <x>0</x>
+         <y>0</y>
+         <width>773</width>
+         <height>923</height>
+        </rect>
+       </property>
+       <widget class="QGroupBox" name="Crosscalibrate">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>25</y>
+          <width>700</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Cross Calibrate</string>
+        </property>
+        <widget class="QLabel" name="Crosshatchvelocitylabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch velocity</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Crosshatchfactorlabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Hatch factor</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Crossmodifybutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>70</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Crosstimelabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_6">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>110</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Crosshatchvelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>3.250000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Crossdisplaybutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display layer</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Crosssavebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>120</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Crosstimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>30</y>
+           <width>120</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Crosshatchfactorbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>5</number>
+         </property>
+         <property name="maximum">
+          <number>50</number>
+         </property>
+         <property name="value">
+          <number>10</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Squarecalibrate">
+        <property name="geometry">
+         <rect>
+          <x>30</x>
+          <y>210</y>
+          <width>700</width>
+          <height>160</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Square Calibrate</string>
+        </property>
+        <widget class="QLabel" name="Squaredotspacinglabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Dot spacing</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Squaregaplabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Square gap</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Squaremodifybutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>70</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Squaretimelabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_7">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>110</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Squaregapbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>5.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>25.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Squaredotspacingbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>2.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Squaredisplaybutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>120</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display layer</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Squaresavebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>120</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Squaretimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>30</y>
+           <width>120</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Dotcalibrate">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>395</y>
+          <width>700</width>
+          <height>200</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Dot Calibrate</string>
+        </property>
+        <widget class="QLabel" name="Dotspacinglabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Dot spacing</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Dotgaplabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Square gap</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Dotmodifybutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>110</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Dotholdlabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Dot hold time</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_8">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>150</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Dotgapbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>5.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>50.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>25.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Dotspacingbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>2.000000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>10.000000000000000</double>
+         </property>
+         <property name="value">
+          <double>5.000000000000000</double>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Dotdisplaybutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>160</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display layer</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Dotsavebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>160</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Dottimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>70</y>
+           <width>120</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Dottimelabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Dotholdbox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>100</number>
+         </property>
+         <property name="maximum">
+          <number>2000</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>500</number>
+         </property>
+        </widget>
+       </widget>
+       <widget class="QGroupBox" name="Numeralcalibrate">
+        <property name="geometry">
+         <rect>
+          <x>25</x>
+          <y>620</y>
+          <width>700</width>
+          <height>240</height>
+         </rect>
+        </property>
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="title">
+         <string>Numeral Calibrate</string>
+        </property>
+        <widget class="QPushButton" name="Numeralmodifybutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>150</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Generate</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralylabel_2">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Y</string>
+         </property>
+        </widget>
+        <widget class="Line" name="line_9">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>190</y>
+           <width>650</width>
+           <height>3</height>
+          </rect>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Numeraldisplaybutton">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>200</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Display layer</string>
+         </property>
+        </widget>
+        <widget class="QPushButton" name="Numeralsavebutton">
+         <property name="geometry">
+          <rect>
+           <x>440</x>
+           <y>200</y>
+           <width>150</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Save</string>
+         </property>
+        </widget>
+        <widget class="QLineEdit" name="Numeraltimebox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>110</y>
+           <width>120</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="readOnly">
+          <bool>true</bool>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeraltimelabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>110</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Time</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Numeralybox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>-7600</number>
+         </property>
+         <property name="maximum">
+          <number>7600</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>6000</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Numeralxbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>30</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>-7600</number>
+         </property>
+         <property name="maximum">
+          <number>7600</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>-6000</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralxlabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>30</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>X</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralheightlabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Height</string>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Numeralheightbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>100</number>
+         </property>
+         <property name="maximum">
+          <number>2000</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>1400</number>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Numeralwidthbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>110</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>100</number>
+         </property>
+         <property name="maximum">
+          <number>2000</number>
+         </property>
+         <property name="singleStep">
+          <number>100</number>
+         </property>
+         <property name="value">
+          <number>350</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralwidthlabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>110</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Width</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralvelocitylabel">
+         <property name="geometry">
+          <rect>
+           <x>385</x>
+           <y>70</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Velocity</string>
+         </property>
+        </widget>
+        <widget class="QDoubleSpinBox" name="Numeralvelocitybox">
+         <property name="geometry">
+          <rect>
+           <x>510</x>
+           <y>70</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <double>0.100000000000000</double>
+         </property>
+         <property name="maximum">
+          <double>20.000000000000000</double>
+         </property>
+         <property name="singleStep">
+          <double>0.250000000000000</double>
+         </property>
+         <property name="value">
+          <double>3.250000000000000</double>
+         </property>
+        </widget>
+        <widget class="QSpinBox" name="Numerallettersbox">
+         <property name="geometry">
+          <rect>
+           <x>150</x>
+           <y>150</y>
+           <width>113</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="minimum">
+          <number>1</number>
+         </property>
+         <property name="maximum">
+          <number>5</number>
+         </property>
+         <property name="singleStep">
+          <number>1</number>
+         </property>
+         <property name="value">
+          <number>5</number>
+         </property>
+        </widget>
+        <widget class="QLabel" name="Numeralletterslabel">
+         <property name="geometry">
+          <rect>
+           <x>25</x>
+           <y>150</y>
+           <width>105</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="text">
+          <string>Letters</string>
+         </property>
+        </widget>
+       </widget>
+      </widget>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1725</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="Menufilebar">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="Menuopenfile"/>
+    <addaction name="separator"/>
+    <addaction name="Menuquit"/>
+   </widget>
+   <addaction name="Menufilebar"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="Menuopenfile">
+   <property name="text">
+    <string>Import</string>
+   </property>
+  </action>
+  <action name="Menuquit">
+   <property name="text">
+    <string>Quit</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+Q</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
